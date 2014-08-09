@@ -440,7 +440,8 @@ module.exports = function (grunt) {
   grunt.registerTask('heroku', [
     'clean:dist',
     'wiredep',
-    'useminPrepare'
+    'useminPrepare',
+    'concurrent:dist'
   ]);
 
   grunt.registerTask('default', [
