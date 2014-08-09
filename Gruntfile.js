@@ -437,7 +437,9 @@ module.exports = function (grunt) {
     'htmlmin'
   ]);
 
-  grunt.registerTask('heroku:production', 'build');
+  grunt.registerTask('heroku:production', [
+    'clean:dist'
+  ]);
 
   grunt.registerTask('default', [
     'newer:jshint',
