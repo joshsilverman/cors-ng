@@ -438,7 +438,9 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('heroku:production', [
-    'clean:dist'
+    'clean:dist',
+    'wiredep',
+    'useminPrepare'
   ]);
 
   grunt.registerTask('default', [
