@@ -41,6 +41,6 @@
   },
   "scripts": {
     "test": "grunt test",
-    "postinstall": "cd app && grunt build"
+    "postinstall": "./node_modules/.bin/grunt build"
   }
 }
