@@ -8,10 +8,9 @@
  * Controller of the ngApp
  */
 angular.module('ngApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $http) {
+    $http.get('http://localhost:8080/users.json').success(function(data) {
+      debugger;
+      console.log(data);
+    });
   });
