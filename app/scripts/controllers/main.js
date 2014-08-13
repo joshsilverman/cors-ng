@@ -9,8 +9,8 @@
  */
 angular.module('ngApp')
   .controller('MainCtrl', function ($scope, $http) {
-    $http.get('/users.json').success(function(data) {
-      debugger;
-      console.log(data);
+    $http.get('http://dev.localhost/users.json', {withCredentials: true, useXDomain: true})
+      .success(function(data) {
+        console.log(data);
     });
   });
